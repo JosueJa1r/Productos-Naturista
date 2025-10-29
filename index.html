@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Hierbas Vivas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Productos Naturistas</h1>
+    </header>
+
+    <main>
+        <div id="catalogo-container">
+            <!-- Los productos se insertarán aquí dinámicamente con JavaScript -->
+        </div>
+    </main>
+
+    <div class="cart-container">
+        <span class="cart-icon">🛒</span>
+        <span id="cart-counter" class="cart-counter">0</span>
+    </div>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-header">
+            <h2>Tu Carrito <span id="cart-modal-counter"></span></h2>
+            <button id="cart-close-btn" class="cart-close-btn">✖</button>
+        </div>
+        <div id="cart-items-list" class="cart-items-list">
+            <!-- Los productos seleccionados se insertarán aquí -->
+        </div>
+        <div class="cart-modal-footer">
+            <div class="cart-total">
+                <strong>Total:</strong>
+                <span id="cart-total-price">$0.00 MXN</span>
+            </div>
+            <div class="cart-footer-actions">
+                <button id="checkout-btn" class="checkout-btn">Finalizar Compra</button>
+                <button id="clear-cart-btn" class="clear-cart-btn">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="notification-container"></div>
+
+    <script src="database.js" defer></script>
+    <script src="script.js" defer></script>
+
+</body>
+</html>

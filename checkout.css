@@ -1,0 +1,155 @@
+/* Estilos para el botón de volver a la tienda en el header */
+.back-to-store-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-store-btn:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+/* Contenedor principal de la página de checkout */
+.checkout-main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Estilos para el resumen del pedido */
+.order-summary, .customer-details {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.order-summary h2, .customer-details h2 {
+    margin-top: 0;
+    color: #2E7D32;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+#summary-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+.summary-item-name {
+    color: #555;
+}
+
+.summary-item-name span {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.summary-item-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.summary-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Estilos para el formulario de datos del cliente */
+#checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #666;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.pay-btn {
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pay-btn:hover {
+    background-color: #388E3C;
+}
+
+/* Responsividad */
+@media (max-width: 800px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilo para la nota de WhatsApp */
+.whatsapp-note {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    border-left: 3px solid #4CAF50;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .checkout-main {
+        padding: 10px;
+    }
+}

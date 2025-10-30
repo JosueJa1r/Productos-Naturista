@@ -24,11 +24,36 @@ header h1 {
     font-size: 2.5em;
 }
 
-/* Estilos para el Carrito y Contador */
-.cart-container {
-    position: fixed; /* Fijo en la pantalla */
+/* Contenedor flotante para el carrito y el mensaje */
+.floating-cart-wrapper {
+    position: fixed;
     bottom: 30px;
     right: 30px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.cart-message {
+    background-color: #FFF9C4; /* Amarillo claro para llamar la atención */
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s ease;
+    /* Animación para hacerlo más visible */
+    animation: pulse 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.floating-cart-wrapper:hover .cart-message {
+    transform: scale(1.05);
+}
+
+/* Estilos para el Carrito y Contador */
+.cart-container {
     width: 60px;
     height: 60px;
     background-color: #4CAF50; /* Verde principal */
@@ -37,9 +62,8 @@ header h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    cursor: pointer;
-    z-index: 999; /* Asegura que esté por encima de otros elementos */
     transition: transform 0.2s ease;
+    position: relative; /* Para posicionar el contador correctamente */
 }
 
 .cart-container:hover {
@@ -498,4 +522,17 @@ footer {
 
 .quitar-btn:hover {
     background-color: #d32f2f;
+}
+
+/* --- Animación para el mensaje del carrito --- */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    50% {
+        transform: scale(1.03);
+        /* Sombra más pronunciada y con un toque de color */
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    }
 }

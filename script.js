@@ -2,7 +2,7 @@
 // La función se ejecuta cuando el DOM está listo gracias al atributo 'defer' en el tag <script>
 const catalogoContainer = document.getElementById('catalogo-container');
 const cartCounterElement = document.getElementById('cart-counter');
-const cartContainer = document.querySelector('.cart-container');
+const cartContainer = document.querySelector('.floating-cart-wrapper'); // Actualizado para el nuevo contenedor
 const cartModal = document.getElementById('cart-modal');
 const cartCloseBtn = document.getElementById('cart-close-btn');
 const cartModalCounter = document.getElementById('cart-modal-counter');
@@ -173,10 +173,11 @@ function updateCartQuantity(index, change) {
         }
 
         // Añadir animación al botón del carrito
-        cartContainer.classList.add('shake');
+        const cartIcon = document.querySelector('.cart-container');
+        cartIcon.classList.add('shake');
         // Eliminar la clase después de que termine la animación
         setTimeout(() => {
-            cartContainer.classList.remove('shake');
+            cartIcon.classList.remove('shake');
         }, 820); // 820ms es la duración de la animación
     }
     cargarEstadoCarrito();
